@@ -33,4 +33,14 @@ router.post("/create",AdminMiddleware, async (req, res) => {
     }
 });
 
+
+router.get('/all', async (req, res) => {
+    try {
+        const lessons = await prisma.lessons.findMany();
+        res.status(200).json({lessons});
+    } catch (error) {
+        res.status(500).json({error: error.message});
+    }
+});
+
 export default router;
