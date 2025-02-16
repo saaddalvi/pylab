@@ -43,4 +43,19 @@ router.get('/all', async (req, res) => {
     }
 });
 
+router.delete('/delete/:id', AdminMiddleware, async (req, res) => {
+    const id = parseInt(req.params.id);
+    try {
+        await prisma.lessons.delete({
+            where: {
+                id: id
+            }
+        });
+        res.status(200).json({message: "Lesson deleted successfully"});
+    } catch (error) {
+        res.status(500).json({error: error.message});
+    }
+}
+);
+
 export default router;
