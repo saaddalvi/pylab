@@ -14,12 +14,13 @@ datasource db {
 }
 
 model Student {
-  id        String   @id @default(uuid())
-  rollNo    Int      @unique
+  id        String    @id @default(uuid())
+  rollNo    Int       @unique
   name      String
-  email     String   @unique
+  email     String    @unique
   password  String
-  createdAt DateTime @default(now())
+  createdAt DateTime  @default(now())
+  Lessons   Lessons[]
 }
 
 model Admin {
@@ -29,4 +30,12 @@ model Admin {
   createdAt DateTime @default(now())
 }
 
-
+model Lessons {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  content     String
+  authorId    String
+  createdAt   DateTime @default(now())
+  author      Student  @relation(fields: [authorId], references: [id])
+}
