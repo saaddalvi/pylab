@@ -1,9 +1,26 @@
-import Image from "next/image";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/landing/HeroSection";
+import FeaturesSection from "@/components/landing/FeaturesSection";
+import HowItWorksSection from "@/components/landing/HowItWorksSection";
+import CTASection from "@/components/landing/CTASection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="h-screen w-screen p-32">
-      <iframe src="https://trinket.io/embed/python/edd948bf08" width="100%" height="456" frameBorder="0" marginWidth={0} marginHeight={0} allowFullScreen></iframe>
+    <div className="flex flex-col min-h-screen pt-24 md:pt-28">
+      {/* Navigation Header */}
+      <Navbar />
+
+      {/* Main Content */}
+      <main>
+        <HeroSection />
+        <FeaturesSection />
+        <HowItWorksSection />
+        <CTASection />
+      </main>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
