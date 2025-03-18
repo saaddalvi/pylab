@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased bg-gradient-to-b from-slate-950 to-slate-900 text-foreground min-h-screen`}
+        className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased bg-gradient-to-b from-slate-950 via-indigo-950/30 to-slate-900 text-foreground min-h-screen`}
       >
         {children}
       </body>
