@@ -18,6 +18,12 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center justify-center space-x-8">
             <a 
+              href="/" 
+              className="text-sm font-medium text-indigo-200/80 hover:text-white transition-colors duration-200"
+            >
+              Home
+            </a>
+            <a 
               href="#features" 
               className="text-sm font-medium text-indigo-200/80 hover:text-white transition-colors duration-200"
             >
@@ -28,6 +34,12 @@ export default function Navbar() {
               className="text-sm font-medium text-indigo-200/80 hover:text-white transition-colors duration-200"
             >
               How It Works
+            </a>
+            <a 
+              href="/editor" 
+              className="text-sm font-medium text-indigo-200 hover:text-white transition-colors duration-200 bg-indigo-500/10 hover:bg-indigo-500/20 px-3 py-1 rounded-full"
+            >
+              Code Editor
             </a>
           </nav>
           
@@ -46,7 +58,13 @@ export default function Navbar() {
       {/* Mobile Navigation */}
       <div className="border-t border-indigo-500/20 md:hidden">
         <div className="container mx-auto px-4 py-3">
-          <div className="flex justify-center space-x-10">
+          <div className="flex justify-center space-x-6">
+            <a 
+              href="/" 
+              className="text-sm font-medium text-indigo-200/80 hover:text-white transition-colors duration-200"
+            >
+              Home
+            </a>
             <a 
               href="#features" 
               className="text-sm font-medium text-indigo-200/80 hover:text-white transition-colors duration-200"
@@ -58,6 +76,12 @@ export default function Navbar() {
               className="text-sm font-medium text-indigo-200/80 hover:text-white transition-colors duration-200"
             >
               How It Works
+            </a>
+            <a 
+              href="/editor" 
+              className="text-sm font-medium text-indigo-200 hover:text-white transition-colors duration-200 bg-indigo-500/10 hover:bg-indigo-500/20 px-3 py-1 rounded-full"
+            >
+              Editor
             </a>
           </div>
         </div>

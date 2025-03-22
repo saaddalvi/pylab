@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -21,12 +22,16 @@ export default function HeroSection() {
             PyLab provides an interactive, hands-on environment for learning Python programming without any installations. Code, experiment, and grow your skills with real-time feedback.
           </p>
           <div className="flex gap-4 pt-2">
-            <Button size="lg" className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 border-0 text-white font-medium">
-              Try It Now
-            </Button>
-            <Button size="lg" variant="outline" className="border-indigo-500/30 text-indigo-300 hover:bg-indigo-500/10 hover:text-white">
-              View Demos
-            </Button>
+            <Link href="/editor">
+              <Button size="lg" className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 border-0 text-white font-medium">
+                Try It Now
+              </Button>
+            </Link>
+            <Link href="#get-started">
+              <Button size="lg" variant="outline" className="border-indigo-500/30 text-indigo-300 hover:bg-indigo-500/10 hover:text-white">
+                Learn More
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="md:w-1/2 relative w-full h-[300px] md:h-[400px] rounded-xl overflow-hidden mt-10 md:mt-0">

@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function CTASection() {
   return (
-    <section className="py-16 md:py-28 relative overflow-hidden">
+    <section className="py-16 md:py-28 relative overflow-hidden" id="get-started">
       <div className="absolute inset-0 bg-gradient-to-b from-indigo-900/20 to-slate-950/90"></div>
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent"></div>
       <div className="absolute -left-40 top-40 w-80 h-80 bg-purple-600/20 rounded-full blur-3xl opacity-30 pointer-events-none"></div>
@@ -19,9 +20,11 @@ export default function CTASection() {
             Join thousands of learners who are building their Python skills with PyLab's interactive environment. Start coding in minutes, no setup required.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="px-8 py-6 text-base bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 border-0 text-white shadow-lg shadow-indigo-500/25">
-              Get Started for Free
-            </Button>
+            <Link href="/editor">
+              <Button size="lg" className="px-8 py-6 text-base bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 border-0 text-white shadow-lg shadow-indigo-500/25">
+                Try the Code Editor
+              </Button>
+            </Link>
             <Button size="lg" variant="outline" className="px-8 py-6 text-base border-indigo-500/30 text-indigo-300 hover:bg-indigo-500/10 hover:text-white">
               View Learning Paths
             </Button>
