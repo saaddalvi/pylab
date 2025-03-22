@@ -19,7 +19,7 @@ const CodeEditor = ({ code, setCode }) => {
           <div className="h-3 w-3 rounded-full bg-red-400"></div>
           <div className="h-3 w-3 rounded-full bg-yellow-400"></div>
           <div className="h-3 w-3 rounded-full bg-green-400"></div>
-          <div className="ml-2 text-xs text-gray-400">python code</div>
+          <div className="ml-2 text-xs text-gray-400">Python Code</div>
         </div>
         <div className="w-full h-[calc(100%-32px)]">
           <CodeMirror

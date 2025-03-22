@@ -56,7 +56,7 @@ const OutputDisplay = ({ output, error, isLoading, onRunCode }) => {
           <div className="h-3 w-3 rounded-full bg-red-400"></div>
           <div className="h-3 w-3 rounded-full bg-yellow-400"></div>
           <div className="h-3 w-3 rounded-full bg-green-400"></div>
-          <div className="ml-2 text-xs text-gray-400">output terminal</div>
+          <div className="ml-2 text-xs text-gray-400">Output Terminal</div>
         </div>
         <pre className="w-full h-[calc(100%-32px)] p-4 font-mono text-sm overflow-auto text-indigo-100">
           {error ? (

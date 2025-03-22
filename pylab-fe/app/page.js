@@ -6,7 +6,6 @@ import CTASection from "@/components/landing/CTASection";
 export default function Home() {
   return (
     <div>
-      {/* Main Content */}
       <main>
         <HeroSection />
         <FeaturesSection />

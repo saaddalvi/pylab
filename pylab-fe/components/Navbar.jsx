@@ -8,7 +8,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <a href="/" className="flex items-center">
-              <h1 className="text-xl font-bold">
+              <h1 className="text-2xl font-bold">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Py</span>
                 <span className="text-slate-200">Lab</span>
               </h1>
@@ -19,25 +19,31 @@ export default function Navbar() {
           <nav className="hidden md:flex items-center justify-center space-x-8">
             <a 
               href="/" 
-              className="text-sm font-medium text-indigo-200/80 hover:text-white transition-colors duration-200"
+              className="text-base font-medium text-indigo-200/90 hover:text-white transition-colors duration-200"
             >
               Home
             </a>
             <a 
+              href="/lessons" 
+              className="text-base font-medium text-indigo-200/90 hover:text-white transition-colors duration-200"
+            >
+              Lessons
+            </a>
+            <a 
               href="#features" 
-              className="text-sm font-medium text-indigo-200/80 hover:text-white transition-colors duration-200"
+              className="text-base font-medium text-indigo-200/90 hover:text-white transition-colors duration-200"
             >
               Features
             </a>
             <a 
               href="#how-it-works" 
-              className="text-sm font-medium text-indigo-200/80 hover:text-white transition-colors duration-200"
+              className="text-base font-medium text-indigo-200/90 hover:text-white transition-colors duration-200"
             >
               How It Works
             </a>
             <a 
               href="/editor" 
-              className="text-sm font-medium text-indigo-200 hover:text-white transition-colors duration-200 bg-indigo-500/10 hover:bg-indigo-500/20 px-3 py-1 rounded-full"
+              className="text-base font-medium text-indigo-200 hover:text-white transition-colors duration-200 bg-indigo-500/10 hover:bg-indigo-500/20 px-4 py-1.5 rounded-full"
             >
               Code Editor
             </a>
@@ -45,10 +51,10 @@ export default function Navbar() {
           
           {/* Auth Buttons */}
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="sm" className="hidden sm:inline-flex text-sm text-indigo-200 hover:text-white hover:bg-indigo-500/10">
+            <Button variant="ghost" size="sm" className="hidden sm:inline-flex text-base text-indigo-200 hover:text-white hover:bg-indigo-500/10">
               Sign In
             </Button>
-            <Button size="sm" className="text-sm font-medium bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 border-0 text-white">
+            <Button size="sm" className="text-base font-medium bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 border-0 text-white px-4 py-1.5">
               Get Started
             </Button>
           </div>
@@ -61,25 +67,31 @@ export default function Navbar() {
           <div className="flex justify-center space-x-6">
             <a 
               href="/" 
-              className="text-sm font-medium text-indigo-200/80 hover:text-white transition-colors duration-200"
+              className="text-base font-medium text-indigo-200/90 hover:text-white transition-colors duration-200"
             >
               Home
             </a>
             <a 
+              href="/lessons" 
+              className="text-base font-medium text-indigo-200/90 hover:text-white transition-colors duration-200"
+            >
+              Lessons
+            </a>
+            <a 
               href="#features" 
-              className="text-sm font-medium text-indigo-200/80 hover:text-white transition-colors duration-200"
+              className="text-base font-medium text-indigo-200/90 hover:text-white transition-colors duration-200"
             >
               Features
             </a>
             <a 
               href="#how-it-works" 
-              className="text-sm font-medium text-indigo-200/80 hover:text-white transition-colors duration-200"
+              className="text-base font-medium text-indigo-200/90 hover:text-white transition-colors duration-200"
             >
               How It Works
             </a>
             <a 
               href="/editor" 
-              className="text-sm font-medium text-indigo-200 hover:text-white transition-colors duration-200 bg-indigo-500/10 hover:bg-indigo-500/20 px-3 py-1 rounded-full"
+              className="text-base font-medium text-indigo-200 hover:text-white transition-colors duration-200 bg-indigo-500/10 hover:bg-indigo-500/20 px-3 py-1 rounded-full"
             >
               Editor
             </a>
