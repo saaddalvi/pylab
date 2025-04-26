@@ -22,7 +22,9 @@ export default function LessonsPage() {
         console.log("API response:", result);
         
         if (result.success) {
-          setLessons(Array.isArray(result.data) ? result.data : []);
+          // Extract lessons array from result.data.lessons
+          const lessonsData = result.data.lessons || result.data;
+          setLessons(Array.isArray(lessonsData) ? lessonsData : []);
           setDebugInfo(null);
         } else {
           setError(result.error);

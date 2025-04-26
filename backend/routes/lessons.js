@@ -43,8 +43,53 @@ router.get('/all', async (req, res) => {
     }
 });
 
+router.get('/:id', async (req, res) => {
+    try {
+        // Use the ID as a string (not parseInt)
+        const id = req.params.id;
+        
+        const lesson = await prisma.lessons.findUnique({
+            where: {
+                id: id
+            }
+        });
+        
+        if (!lesson) {
+            return res.status(404).json({ error: "Lesson not found" });
+        }
+        
+        res.status(200).json({ lesson });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+router.put('/update/:id', AdminMiddleware, async (req, res) => {
+    const id = req.params.id;
+    const { title, description, content } = req.body;
+    
+    try {
+      const updatedLesson = await prisma.lessons.update({
+        where: { id },
+        data: {
+          title,
+          description,
+          content
+        }
+      });
+      
+      res.status(200).json({
+        message: "Lesson updated successfully",
+        lesson: updatedLesson
+      });
+    } catch (error) {
+      res.status(500).json({error: error.message});
+    }
+  });
+
 router.delete('/delete/:id', AdminMiddleware, async (req, res) => {
-    const id = parseInt(req.params.id);
+    // Use the ID directly as a string, not parseInt
+    const id = req.params.id;
     try {
         await prisma.lessons.delete({
             where: {

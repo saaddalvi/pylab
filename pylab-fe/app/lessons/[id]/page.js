@@ -27,7 +27,9 @@ export default function LessonPage() {
         
         if (result.success) {
           console.log("Lesson data:", result.data);
-          setLesson(result.data);
+          // Extract the lesson from the nested structure
+          const lessonData = result.data.lesson || result.data;
+          setLesson(lessonData);
         } else {
           setError(result.error);
         }
@@ -143,9 +145,11 @@ export default function LessonPage() {
           </div>
         )}
         
-        <ReactMarkdown className="lesson-content text-slate-300">
-          {lessonContent}
-        </ReactMarkdown>
+        <div className="lesson-content text-slate-300">
+          <ReactMarkdown>
+            {lessonContent}
+          </ReactMarkdown>
+        </div>
       </article>
 
       <div className="mt-12 pt-6 border-t border-indigo-500/20">
@@ -158,4 +162,4 @@ export default function LessonPage() {
       </div>
     </div>
   );
-} 
+}

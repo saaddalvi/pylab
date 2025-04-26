@@ -1,6 +1,7 @@
 import { Inter, JetBrains_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { AuthProvider } from "@/lib/context/AuthContext";
 import "./globals.css";
 
 const inter = Inter({
@@ -22,16 +23,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased min-h-screen bg-slate-950 text-white flex flex-col`}>
-        {/* Navigation Header */}
-        <Navbar />
-        
-        {/* Page Content */}
-        <div className="pt-24 md:pt-28 flex-grow">
-          {children}
-        </div>
-        
-        {/* Footer */}
-        <Footer />
+        <AuthProvider>
+          {/* Navigation Header */}
+          <Navbar />
+          
+          {/* Page Content */}
+          <div className="pt-24 md:pt-28 flex-grow">
+            {children}
+          </div>
+          
+          {/* Footer */}
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );

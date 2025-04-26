@@ -14,13 +14,14 @@ datasource db {
 }
 
 model Student {
-  id        String    @id @default(uuid())
-  rollNo    Int       @unique
-  name      String
-  email     String    @unique
-  password  String
-  createdAt DateTime  @default(now())
-  Lessons   Lessons[]
+  id           String         @id @default(uuid())
+  rollNo       Int            @unique
+  name         String
+  email        String         @unique
+  password     String
+  createdAt    DateTime       @default(now())
+  Lessons      Lessons[]
+  UserProgress UserProgress[]
 }
 
 model Admin {
@@ -31,11 +32,26 @@ model Admin {
 }
 
 model Lessons {
-  id          String   @id @default(uuid())
-  title       String
-  description String
-  content     String
-  authorId    String
-  createdAt   DateTime @default(now())
-  author      Student  @relation(fields: [authorId], references: [id])
+  id           String         @id @default(uuid())
+  title        String
+  description  String
+  content      String
+  authorId     String
+  createdAt    DateTime       @default(now())
+  author       Student        @relation(fields: [authorId], references: [id])
+  UserProgress UserProgress[]
+}
+
+model UserProgress {
+  id         String   @id @default(uuid())
+  studentId  String
+  lessonId   String
+  completed  Boolean  @default(false)
+  score      Int?     // Optional score for lesson exercises/quizzes
+  startedAt  DateTime @default(now())
+  completedAt DateTime?
+  student    Student  @relation(fields: [studentId], references: [id])
+  lesson     Lessons  @relation(fields: [lessonId], references: [id])
+
+  @@unique([studentId, lessonId])
 }
