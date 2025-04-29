@@ -1,5 +1,8 @@
 # PyLab - Virtual Coding Lab
 
+
+![pylab home](https://github.com/user-attachments/assets/ab765e67-2287-4482-83e6-c55249ef54d4)
+
 A Next.js and Node.js based virtual lab where students can learn Python through interactive lessons, and admins can manage content. Includes a built-in Python code compiler and progress tracking.
 
 ## 🌟 Key Features
@@ -13,7 +16,7 @@ A Next.js and Node.js based virtual lab where students can learn Python through 
 ## 🛠 Tech Stack
 **Frontend:**
 - Next.js (App Router)
-- React + TypeScript
+- React Js
 - Tailwind CSS (Styling)
 
 **Backend:**
