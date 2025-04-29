@@ -2,7 +2,7 @@
 
 ![pylab home](https://github.com/user-attachments/assets/ab765e67-2287-4482-83e6-c55249ef54d4)
 
-https://drive.google.com/file/d/1fcP7p7FIcR0HkuW_4vCnHsRUKR2j8bTB/view?usp=drivesdk
+Project Demo Link: https://drive.google.com/file/d/1fcP7p7FIcR0HkuW_4vCnHsRUKR2j8bTB/view?usp=drivesdk
 
 A Next.js and Node.js based virtual lab where students can learn Python through interactive lessons, and admins can manage content. Includes a built-in Python code compiler and progress tracking.
 
